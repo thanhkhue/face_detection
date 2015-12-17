@@ -50,8 +50,8 @@ class VideoCamera(object):
 
         ret, jpeg = cv2.imencode('.jpg', frame)
         #todo just cast jpeg to
-        file = open("binary.file","wb")
-        file.write(jpeg)
-        file.close()
-        jpeg = open("binary.file","rb").read()
-        return jpeg
+        # file = open("binary.file","wb")
+        # file.write(jpeg)
+        # file.close()
+        # jpeg = open("binary.file","rb").read()
+        return jpeg.tobytes()
